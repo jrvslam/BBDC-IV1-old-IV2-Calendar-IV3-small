@@ -786,13 +786,17 @@
                 //         selectedSlots.push(slots[i].value)
                 //     }
                 // }
-                for (let i = 0 ; i < selectedSlots.length; i++) {
-                    //alert("HERE " + selectedSlots[i]);
-                    if (selectedSlots[i] == undefined) {
-                        alert("Please select a slot to book.")
-                        return false;
-                    }
+                if (selectedSlots.length === 0) {
+                    alert("Please select a slot to book.")
+                    return false;
                 }
+                // for (let i = 0 ; i < selectedSlots.length; i++) {
+                //     //alert("HERE " + selectedSlots[i]);
+                //     if (selectedSlots[i] == undefined) {
+                //         alert("Please select a slot to book.")
+                //         return false;
+                //     }
+                // }
 
                 localStorage.removeItem('SelectedSlots')
                 localStorage.setItem('SelectedSlots', JSON.stringify(selectedSlots))
