@@ -181,6 +181,7 @@
 			//alert('click');
 			self.openDay(this);
 		});
+		outer.id = day.format('MMM DD ddd');
 
 		//Day Name
 		var name = createElement('div', 'day-name', day.format('ddd'));
@@ -211,7 +212,7 @@
 
 			todaysEvents.forEach(function (ev) {
 				var evSpan = createElement('span', ev.color);
-				evSpan.id = 'event';
+				evSpan.id = day.format('MMM DD ddd');
 				element.appendChild(evSpan);
 			});
 		}
