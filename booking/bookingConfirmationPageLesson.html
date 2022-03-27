@@ -6,7 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 
     <link rel="stylesheet" href="../style.css" />
-    <script language="javascript" src="admin/inc-script/common.js"></script>
+    <script language="javascript" src="../admin/inc-script/common.js"></script>
+    <script src="../logging.js"></script>
 </head>
 
 <body onload="changeConfirmationDetails()" bgcolor="#FFFFFF" marginwidth="0" marginheight="0" topmargin="0"
@@ -56,9 +57,11 @@
             var lessonType = localStorage.getItem('TheorySelection')
             if (lessonType == 'BTL') {
                 document.getElementById("Heading").innerHTML = "Booking for BTL confirmation"
+                document.title = "Booking for BTL confirmation"
             }
             else if (lessonType == 'FTL') {
                 document.getElementById("Heading").innerHTML = "Booking for FTL confirmation"
+                document.title = "Booking for FTL confirmation"
             }
 
         }
@@ -266,8 +269,8 @@
 
 
     <script>if (document.all) document.all.processmsg.style.visibility = 'hidden';</script>
-    <script>if (document.layers) document.processmsg.visibility = 'hidden'</script>
-    <script>if (document.getElementById) document.getElementById('processmsg').style.visibility = 'hidden'</script>
+    <script>if (document.layers) document.processmsg.visibility = 'hidden';</script>
+    <!-- <script>if (document.getElementById) document.getElementById('processmsg').style.visibility = 'hidden'</script> -->
 
 </body>
 
